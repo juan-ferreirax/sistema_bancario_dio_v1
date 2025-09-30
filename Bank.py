@@ -1,9 +1,10 @@
-from modulos.textos import menu
+from modulos.textos import menu, mensagem
 from modulos.cor import green, red, blue, reset
 from modulos.operacoes import deposito, saque, extrato
 
-menu()
+mensagem("Welcome to the Bank")
 while True:
+    menu()
     op = int(input(f"{blue}Informe a opção desejada: {reset}"))
     match op:
         case 1:

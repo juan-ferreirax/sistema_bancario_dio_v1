@@ -45,9 +45,18 @@ def saque():
 
 def extrato():
     mensagem("Extrato Bancário")
+    with open("Extrato.txt", "a", encoding="utf-8") as file:
+        file.write("-" * 30)
     for transacoes in extrato_bancario:
         for transacao, valor in transacoes.items():
-            print(f"{transacao:<18} R$ {valor:.2f}")
+            with open("Extrato.txt", "a", encoding="utf-8") as file:
+                print(f"{transacao:<18} R$ {valor:.2f}")
+                file.write(f"\n{transacao:<18} R$ {valor:.2f}")
+    with open("Extrato.txt", "a", encoding="utf-8") as file:
+        file.write("\n")
+        file.write("-" * 30)
+        file.write(f"\nSaldo".ljust(19) + "R$ " + f"{saldo:.2f}")
     linha()        
     print(f"Saldo".ljust(19) + "R$ " + f"{saldo:.2f}")
+    print(f"{green}EXTRATO CRIADO COM SUCESSO! VERIFIQUE O ARQUIVO \"Extrato.txt\"{reset}")
     linha()
