@@ -8,7 +8,7 @@ def depositar(saldo, valor, extrato, /): #tudo antes da / será obrigatoriamente
         extrato += f"Deposito: \tR$ {valor:.2f}\n"
         concluir("DEPOSITO REALIZADO COM SUCESSO!")
     else:
-        print(f"\n{red}ERRO! O valor informado é inválido!{reset}")
+        erro("ERRO! O valor informado é inválido!")
     
     return saldo, extrato
 
