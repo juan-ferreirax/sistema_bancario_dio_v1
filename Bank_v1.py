@@ -1,6 +1,6 @@
-from modulos.textos import menu, mensagem
-from modulos.cor import green, red, blue, reset
-from modulos.operacoes import deposito, saque, extrato
+from modulos_v1.textos import menu, mensagem
+from modulos_v1.cor import green, red, blue, reset
+from modulos_v1.operacoes import deposito, saque, extrato
 
 mensagem("Welcome to the Bank")
 while True:
