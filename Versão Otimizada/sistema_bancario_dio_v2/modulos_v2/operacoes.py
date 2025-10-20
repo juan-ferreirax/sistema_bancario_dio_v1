@@ -1,5 +1,5 @@
 # Operações realizadas pela aplicação bancária
-from .cores import red, yellow, reset
+from .cores import yellow, reset
 from .exibicao import linha, mensagem, concluir, erro
 
 def depositar(saldo, valor, extrato, /): #tudo antes da / será obrigatoriamente parâmetros posicionais
